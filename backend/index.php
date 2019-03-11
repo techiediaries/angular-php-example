@@ -1,7 +1,8 @@
 <?php
 header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Methods: PUT, GET, POST");
+header("Access-Control-Allow-Methods: PUT, GET, POST, DELETE");
 header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
+
 
 $localhost = "127.0.0.1"; 
 $username = "root"; 
@@ -24,7 +25,6 @@ mysqli_set_charset($conn ,'utf8');
 if($conn->connect_error) {
     die("Error : " . $conn->connect_error);
 } 
-
 
 switch ($method) {
   case 'GET':
